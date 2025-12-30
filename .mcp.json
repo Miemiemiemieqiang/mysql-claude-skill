@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "mysql-skill-local": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/caikaiqiang/Documents/Code/claude/mysql-claude-skill",
+        "run",
+        "python",
+        "server.py"
+      ]
+    }
+  }
+}
