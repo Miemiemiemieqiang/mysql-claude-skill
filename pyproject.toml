@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [project.scripts]
-mysql-skill = "server:mcp"
+mysql-skill = "server:mcp.run"
 
 [tool.setuptools]
 py-modules = ["server"]
