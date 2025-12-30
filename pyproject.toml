@@ -13,6 +13,9 @@ dependencies = [
 [project.scripts]
 mysql-skill = "server:mcp"
 
+[tool.setuptools]
+py-modules = ["server"]
+
 [project.urls]
 #Homepage = "https://github.com/yourname/mysql-claude-skill"
 #Repository = "https://github.com/yourname/mysql-claude-skill"
