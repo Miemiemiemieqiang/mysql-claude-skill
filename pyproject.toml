@@ -9,3 +9,11 @@ dependencies = [
     "mysql-connector-python>=9.5.0",
     "python-dotenv>=1.2.1",
 ]
+
+[project.scripts]
+[project.scripts]
+mysql-skill = "server:mcp"
+
+[project.urls]
+#Homepage = "https://github.com/yourname/mysql-claude-skill"
+#Repository = "https://github.com/yourname/mysql-claude-skill"
