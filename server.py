@@ -33,14 +33,19 @@ def test_connection() -> str:
         )
     try:
         conn = get_db_connection()
+        cursor = conn.cursor()
+        cursor.execute("SELECT 1")
+        cursor.fetchone()
+        cursor.close()
         conn.close()
         return "Connection successful."
     except Exception as e:
+        host = os.getenv("DB_HOST", "localhost")
         return (
             f"Connection failed: {e}\n"
-            "Please check your environment variables:\n"
-            "  DB_HOST (current: {host})\n"
-            "  DB_USER, DB_PASSWORD, DB_NAME".format(host=os.getenv("DB_HOST", "localhost"))
+            f"Please check your environment variables:\n"
+            f"  DB_HOST (current: {host})\n"
+            f"  DB_USER, DB_PASSWORD, DB_NAME"
         )
 
 @mcp.tool()
