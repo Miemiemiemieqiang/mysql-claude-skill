@@ -1,0 +1,23 @@
+server.py
+  e9b89fd0f82dcfe9 36-39,43,46-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "694d681f1970a9d8916737528d623ace5d58d8b7",
+  "prompts": {
+    "e9b89fd0f82dcfe9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8a009da0-82e6-4bd9-9c63-0d2af6b74bea",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "mituan <mituan@tsign.cn>",
+      "messages": [],
+      "total_additions": 8,
+      "total_deletions": 3,
+      "accepted_lines": 8,
+      "overriden_lines": 0
+    }
+  }
+}
