@@ -18,6 +18,32 @@ def get_db_connection():
     )
 
 @mcp.tool()
+def test_connection() -> str:
+    """Test the MySQL database connection. If it fails, provides hints on setting environment variables."""
+    required_vars = ["DB_USER", "DB_PASSWORD", "DB_NAME"]
+    missing = [v for v in required_vars if not os.getenv(v)]
+    if missing:
+        return (
+            f"Missing environment variables: {', '.join(missing)}. "
+            "Please set them in a .env file or export them:\n"
+            "  DB_HOST=localhost  (optional, defaults to localhost)\n"
+            "  DB_USER=your_username\n"
+            "  DB_PASSWORD=your_password\n"
+            "  DB_NAME=your_database"
+        )
+    try:
+        conn = get_db_connection()
+        conn.close()
+        return "Connection successful."
+    except Exception as e:
+        return (
+            f"Connection failed: {e}\n"
+            "Please check your environment variables:\n"
+            "  DB_HOST (current: {host})\n"
+            "  DB_USER, DB_PASSWORD, DB_NAME".format(host=os.getenv("DB_HOST", "localhost"))
+        )
+
+@mcp.tool()
 def list_tables() -> str:
     """List all tables in the database to understand the schema."""
     conn = get_db_connection()
