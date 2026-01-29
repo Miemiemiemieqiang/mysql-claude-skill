@@ -1,0 +1,37 @@
+server.py
+  0f9f888e257e0592 2-7,19-21,34-41,43-44,47-60,65-66,69,71-72,81,83-86,91-92,95,97-99,101-102,104,110-112
+  7113a43e503cea01 18,31-32,61-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.37",
+  "base_commit_sha": "a152b7c0e8edcf5122ba0288a0ed673377e3de7c",
+  "prompts": {
+    "0f9f888e257e0592": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4d6abf55-ea87-4de3-aea3-7a41724b0a10",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "mituan <mituan@tsign.cn>",
+      "messages": [],
+      "total_additions": 64,
+      "total_deletions": 65,
+      "accepted_lines": 60,
+      "overriden_lines": 0
+    },
+    "7113a43e503cea01": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b84c577c-bb3a-4d29-bdfc-a0cef757cad9",
+        "model": "claude-opus-4-5-20251101"
+      },
+      "human_author": "mituan <mituan@tsign.cn>",
+      "messages": [],
+      "total_additions": 48,
+      "total_deletions": 32,
+      "accepted_lines": 15,
+      "overriden_lines": 0
+    }
+  }
+}
